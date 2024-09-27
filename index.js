@@ -18,9 +18,9 @@ document.getElementById("form").addEventListener("submit", function (event) {
     stopSound();
 
     if (imc < 18.5) {
-        mensaje = "Estás por debajo del peso ideal. Podrías considerar aumentar tu ingesta calórica.";
-        imagen = "img/bajo_peso.png"; // Cambia la ruta de la imagen según sea necesario
-        sonido = "audio/bajo_peso.mp3"; // Ruta al archivo de sonido correspondiente
+        mensaje = "Estás por debajo del peso ideal.";
+        imagen = "esqueleto.png"; // Cambia la ruta de la imagen según sea necesario
+        sonido = "esqueleto.mp3"; // Ruta al archivo de sonido correspondiente
     } else if (imc >= 18.5 && imc <= 24.9) {
         mensaje = "¡Estás en tu peso ideal! Sigue manteniendo un estilo de vida saludable.";
         imagen = "img/peso_ideal.png";
