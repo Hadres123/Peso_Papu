@@ -24,7 +24,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
     } else if (imc >= 18.5 && imc <= 24.9) {
         mensaje = "¡Estás en tu peso ideal! Sigue manteniendo un estilo de vida saludable.";
         imagen = "img/peso_ideal.png";
-        sonido = "audio/peso_ideal.mp3";
+        sonido = "normal.mp3";
     } else if (imc >= 25 && imc <= 29.9) {
         mensaje = "Tienes sobrepeso. Considera mejorar tu dieta y aumentar la actividad física.";
         imagen = "gorda.jpg";
