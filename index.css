@@ -1,138 +1,175 @@
-:root {
-    --primary-color: #FF69B4;
-    --secondary-color: #FFC0CB;
-    --background-color: #FFF0F5;
-    --text-color: #4A0E4E;
-    --border-radius: 12px;
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+/* Header styles */
 header {
-    grid-column: 1 / -1;
+    width: 100%;
+    background-color: #ff69b4;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-h1, h2, h3 {
-    color: var(--primary-color);
-}
-
-main {
-    background-color: white;
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.1);
-}
-
-#calculator {
+    padding: 20px 0;
     margin-bottom: 30px;
 }
 
-.input-group {
+h1 {
+    font-size: 2.5em;
+}
+
+/* Main content styles */
+main {
+    flex: 2;
+    margin-right: 30px;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+#imc-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: var(--primary-color);
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-input, select {
+input[type="number"],
+select {
     width: 100%;
-    padding: 12px;
-    border: 2px solid var(--secondary-color);
-    border-radius: var(--border-radius);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     font-size: 16px;
-    transition: border-color 0.3s;
 }
 
-input:focus, select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-button {
-    background-color: var(--primary-color);
+button[type="submit"] {
+    background-color: #ff69b4;
     color: white;
     border: none;
-    padding: 14px 24px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
+    padding: 12px 20px;
     font-size: 18px;
-    transition: background-color 0.3s;
-    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #FF1493;
+button[type="submit"]:hover {
+    background-color: #ff1493;
 }
 
+/* Result styles */
 #resultado {
     text-align: center;
-    padding: 30px;
-    background-color: #FFF0F5;
-    border-radius: var(--border-radius);
-    margin-top: 30px;
-    border: 2px solid var(--primary-color);
 }
 
 #imc-valor {
-    font-size: 48px;
+    font-size: 3em;
     font-weight: bold;
-    color: var(--primary-color);
+    margin: 20px 0;
 }
 
 #imc-categoria {
-    font-size: 24px;
-    margin: 15px 0;
-    color: var(--text-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 #imc-mensaje {
     font-style: italic;
-    color: #666;
 }
 
-#imc-grafico {
-    margin-top: 30px;
+#imc-grafico img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
 }
 
-#consejos, #historial {
-    margin-top: 30px;
-}
-
-aside {
+/* Sidebar styles */
+#info {
+    flex: 1;
     background-color: white;
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#info h2 {
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+#info h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#info ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#info li {
+    margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    main {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    #info {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .hidden {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
+#resultado:not(.hidden) {
+    animation: fadeIn 0.5s ease-in;
 }
