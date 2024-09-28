@@ -57,6 +57,7 @@ function interpretarIMC(imc, edad, etapaVida) {
             categoria = "Peso normal";
             mensaje = "¡Felicidades! Tu IMC está en un rango saludable.";
             color = "#4CAF50";
+            imagen = "gesto.jpg";
             sonido = "normal.mp3";
         } else if (imc >= 25 && imc < 30) {
             categoria = "Sobrepeso";
