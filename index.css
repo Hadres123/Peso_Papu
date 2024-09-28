@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Main content styles */
+
 main {
     flex: 2;
     margin-right: 40px;
@@ -58,7 +58,7 @@ section:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Form styles */
+
 #imc-form {
     display: flex;
     flex-direction: column;
@@ -110,7 +110,7 @@ button[type="submit"]:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Result styles */
+
 #resultado {
     text-align: center;
 }
@@ -233,7 +233,7 @@ button[type="submit"]:hover {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Additional styles for better visual hierarchy */
+
 h2 {
     color: #555;
     margin-bottom: 20px;
@@ -246,7 +246,7 @@ h2 {
     margin-top: 20px;
 }
 
-/* Styling for the chart */
+
 #historial-grafico {
     max-width: 100%;
     height: 300px;
