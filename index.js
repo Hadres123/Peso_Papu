@@ -57,7 +57,6 @@ function interpretarIMC(imc, edad, etapaVida) {
             categoria = "Peso normal";
             mensaje = "¡Felicidades! Tu IMC está en un rango saludable.";
             color = "#4CAF50";
-            imagen = "img/peso_ideal.png";
             sonido = "normal.mp3";
         } else if (imc >= 25 && imc < 30) {
             categoria = "Sobrepeso";
@@ -69,7 +68,7 @@ function interpretarIMC(imc, edad, etapaVida) {
             categoria = "Obesidad";
             mensaje = "Tu IMC indica obesidad. Te recomendamos consultar con un profesional de la salud para un plan personalizado.";
             color = "#F44336";
-            imagen = "img/obesidad.png";
+            imagen = "ballena.jpg";
             sonido = "audio/obesidad.mp3";
         }
 
